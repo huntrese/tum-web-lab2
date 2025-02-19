@@ -17,3 +17,16 @@ async function loadComponent(componentName, targetElementId) {
     loadComponent("header", "header-placeholder");
     loadComponent("footer", "footer-placeholder");
   });
+  // Back to Top Button
+document.addEventListener("scroll", () => {
+    const backToTopButton = document.getElementById("back-to-top");
+    if (window.scrollY > 200) {
+      backToTopButton.style.display = "block";
+    } else {
+      backToTopButton.style.display = "none";
+    }
+  });
+  
+  document.getElementById("back-to-top").addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });

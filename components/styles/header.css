@@ -1,12 +1,75 @@
 header {
-    background-color: #333;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  header nav a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-  }
+  background-color: #333;
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed; /* Make header sticky */
+  top: 0; /* Stick it to the top */
+  z-index: 1000; /* Ensures the header stays on top of other elements */
+  width:100%; /* Ensures full-width */
+}
+
+header nav {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-grow: 1; /* Ensures nav links are centered */
+}
+
+header nav a {
+  color: white;
+  margin: 4px;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+header nav a:hover {
+  background-color: #555;
+  border-color: #fff;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+header nav a:active {
+  background-color: #444;
+  transform: scale(1);
+}
+
+header div {
+  display: flex;
+  justify-content: flex-end;
+}
+
+header img {
+  width: 40px;
+}
+
+/* Styling for "TRY IT NOW!" button */
+header div a {
+  color: white;
+  background-color: #ff9800; /* Bright orange color */
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 30px; /* Rounded corners */
+  font-weight: bold;
+  text-transform: uppercase; /* All caps for emphasis */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transition: all 0.3s ease;
+}
+
+header div a:hover {
+  background-color: #e68900; /* Darker orange on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+header div a:active {
+  background-color: #e68900;
+  transform: translateY(0); /* Reset the lift effect on click */
+}
