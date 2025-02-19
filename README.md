@@ -2,10 +2,15 @@
 
 Create a web page for your/friends/relatives business (example: car-rent, cookies-shop, crypto-scam)
 
-This project requires a live server to run - install Live server extension for vscode and open index.html
+This project can be viewed at https://huntrese.github.io/tum-web-lab2/
 
-This is a technical requirement for separating the code into separate components and loading them dinamically
+Screenshots:
 
+![image](https://github.com/user-attachments/assets/ca827e08-d979-43f0-b7f6-04437bc436c2)
+
+![image](https://github.com/user-attachments/assets/826ea407-df0e-4286-ad2a-47ed832beacc)
+
+![image](https://github.com/user-attachments/assets/18c58479-2242-4c22-a908-e0b0797f862b)
 
 
 
