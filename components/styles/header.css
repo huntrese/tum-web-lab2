@@ -12,21 +12,12 @@ header {
   width: 100%;
 }
 
-/* Remove y padding on mobile devices */
-@media (max-width: 768px) {
-  header {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-
 header nav {
   display: flex;
   gap: 10px;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  /* Ensures nav links are centered */
 }
 
 header nav a {
@@ -52,7 +43,7 @@ header nav a:active {
   transform: scale(1);
 }
 
-header div {
+header div.cta-button {
   display: flex;
   justify-content: flex-end;
 }
@@ -61,32 +52,146 @@ header img {
   width: 40px;
 }
 
-/* Styling for "TRY IT NOW!" button */
-header div a {
+/* Common button styling for both desktop and mobile */
+.try-it-now-btn {
   color: white;
   background-color: #ff9800;
-  /* Bright orange color */
   padding: 12px 25px;
   text-decoration: none;
   border-radius: 30px;
-  /* Rounded corners */
   font-weight: bold;
   text-transform: uppercase;
-  /* All caps for emphasis */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  /* Subtle shadow for depth */
   transition: all 0.3s ease;
+  border: none;
+  display: inline-block;
 }
 
-header div a:hover {
+.try-it-now-btn:hover {
   background-color: #e68900;
-  /* Darker orange on hover */
   transform: translateY(-2px);
-  /* Slight lift effect */
 }
 
-header div a:active {
+.try-it-now-btn:active {
   background-color: #e68900;
   transform: translateY(0);
-  /* Reset the lift effect on click */
+}
+
+/* Burger menu styles */
+.burger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.burger-icon {
+  width: 30px;
+  height: 25px;
+  position: relative;
+  margin-right: 10px;
+}
+
+.burger-icon span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 3px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.burger-icon span:nth-child(1) {
+  top: 0px;
+}
+
+.burger-icon span:nth-child(2) {
+  top: 10px;
+}
+
+.burger-icon span:nth-child(3) {
+  top: 20px;
+}
+
+/* Animation for burger menu */
+.burger-icon.open span:nth-child(1) {
+  top: 10px;
+  transform: rotate(135deg);
+}
+
+.burger-icon.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+.burger-icon.open span:nth-child(3) {
+  top: 10px;
+  transform: rotate(-135deg);
+}
+
+/* Mobile navigation */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  flex-direction: column;
+  /* padding: 20px 0; */
+  z-index: 999;
+
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.mobile-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 1px solid #444;
+}
+
+.mobile-nav a:hover {
+  background-color: #555;
+}
+
+.mobile-cta {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Remove button-specific styling from these selectors */
+.cta-button a {
+  /* Button styling now applied through .try-it-now-btn class */
+}
+
+.mobile-cta a {
+  /* Button styling now applied through .try-it-now-btn class */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  #desktop-nav, .cta-button {
+    display: none;
+  }
+  
+  .burger-menu {
+    display: block;
+  }
+  
+  .mobile-nav.open {
+    display: flex;
+  }
 }
