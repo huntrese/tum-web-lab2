@@ -4,7 +4,11 @@ Create a web page for your/friends/relatives business (example: car-rent, cookie
 
 This project can be viewed at https://huntrese.github.io/tum-web-lab2/
 
+Mascot appears after 5 seconds
+
 Screenshots:
+
+![image](https://github.com/user-attachments/assets/31e48daf-fd46-4722-836f-1d92c1d94cb5)
 
 ![image](https://github.com/user-attachments/assets/ca827e08-d979-43f0-b7f6-04437bc436c2)
 
