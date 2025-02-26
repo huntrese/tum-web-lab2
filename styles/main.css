@@ -4,15 +4,17 @@
     background-color: #f4f4f4;
     text-align: center;
   }
-  
+
   html {
     scroll-behavior: smooth;
   }
+
   #back-to-top {
-    display: none; /* Hidden by default */
+    display: none;
+    /* Hidden by default */
     position: fixed;
-    bottom: 40px;
-    right: 20px;
+    bottom: 20px;
+    left: 20px;
     padding: 10px 15px;
     background-color: #333;
     color: white;
@@ -21,14 +23,14 @@
     cursor: pointer;
     font-size: 1rem;
   }
-  
+
   #back-to-top:hover {
     background-color: #555;
   }
 
   /* Hero Section */
-.hero {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1950');
+  .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1950');
     background-size: cover;
     color: white;
     padding: 150px 20px 100px;
@@ -38,99 +40,99 @@
     align-items: center;
     justify-content: center;
   }
-  
+
   .hero h1 {
     font-size: 2.5rem;
     text-transform: uppercase;
     margin-bottom: 1rem;
   }
-  
+
   .subtitle {
     font-size: 1.5rem;
     margin-bottom: 2rem;
   }
-  
+
   .warning-text {
     color: #ff4444;
     font-size: 0.9rem;
     margin-top: 1rem;
   }
-  
+
   /* Features Section */
   .dark-section {
     background: #1a1a1a;
     color: white;
     padding: 4rem 2rem;
   }
-  
+
   .features-grid {
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     margin-top: 2rem;
   }
-  
+
   .feature-card {
     background: #333;
     padding: 2rem;
     border-radius: 10px;
     transition: transform 0.3s ease;
   }
-  
+
   .feature-card:hover {
     transform: translateY(-5px);
   }
-  
+
   /* Challenge Section */
   .highlight-section {
     background: #ff9800;
     padding: 4rem 2rem;
     text-align: center;
   }
-  
+
   .challenge-container {
     max-width: 600px;
     margin: 0 auto;
   }
-  
+
   .challenge-list {
     list-style: none;
     padding: 0;
     font-size: 1.2rem;
     margin: 2rem 0;
   }
-  
+
   .stats {
     font-size: 2rem;
     font-weight: bold;
     margin: 1rem 0;
   }
-  
+
   /* Testimonials */
   .testimonial-section {
     padding: 4rem 2rem;
     text-align: center;
     background: #f5f5f5;
   }
-  
+
   blockquote {
     font-size: 1.5rem;
     max-width: 800px;
     margin: 0 auto;
   }
-  
+
   cite {
     display: block;
     margin-top: 1rem;
     font-style: normal;
     color: #666;
   }
-  
+
   .rating {
     font-size: 1.2rem;
     margin-top: 2rem;
   }
-  
+
   /* Final CTA */
   .final-cta {
     text-align: center;
@@ -138,7 +140,7 @@
     background: #2c3e50;
     color: white;
   }
-  
+
   .cta-button {
     display: inline-block;
     background: #ff9800;
@@ -151,30 +153,30 @@
     margin: 1rem 0;
     transition: all 0.3s ease;
   }
-  
+
   .cta-button:hover {
     background: #e68900;
     transform: scale(1.05);
   }
-  
+
   .small-text {
     font-size: 0.8rem;
     margin-top: 1rem;
   }
-  
+
   /* About Section */
-.about-content {
+  .about-content {
     max-width: 800px;
     margin: 0 auto;
     font-size: 1.1rem;
     line-height: 1.6;
   }
-  
+
   .bullshit-list {
     list-style: none;
     margin: 1.5rem 0;
   }
-  
+
   .bullshit-list li {
     background: #444;
     padding: 1rem;
@@ -182,17 +184,17 @@
     border-radius: 5px;
     transition: transform 0.3s ease;
   }
-  
+
   .bullshit-list li:hover {
     transform: translateX(10px);
   }
-  
+
   .fun-fact {
     margin-top: 2rem;
     font-style: italic;
     color: #ff9800;
   }
-  
+
   /* Contact Section */
   .contact-content {
     max-width: 800px;
@@ -200,14 +202,14 @@
     font-size: 1.1rem;
     line-height: 1.6;
   }
-  
+
   .contact-methods {
     display: grid;
     gap: 1.5rem;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     margin: 2rem 0;
   }
-  
+
   .contact-card {
     background: #fff;
     color: #333;
@@ -216,44 +218,45 @@
     text-align: center;
     transition: transform 0.3s ease;
   }
-  
+
   .contact-card:hover {
     transform: translateY(-5px);
   }
-  
+
   .contact-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
   }
-  
+
   .contact-card a {
     color: #ff9800;
     text-decoration: none;
   }
-  
+
   .contact-card a:hover {
     text-decoration: underline;
   }
-  
+
   .disclaimer {
     margin-top: 2rem;
     font-size: 0.9rem;
     color: #666;
   }
+
   /* Survival Tips Section */
-#survival-tips {
+  #survival-tips {
     background-color: #f4f4f4;
     padding: 50px 20px;
     text-align: center;
   }
-  
+
   .survival-list {
     list-style: none;
     padding: 0;
     max-width: 600px;
     margin: 0 auto;
   }
-  
+
   .survival-list li {
     font-size: 18px;
     margin: 15px 0;
@@ -263,11 +266,11 @@
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
   }
-  
+
   .survival-list li:hover {
     transform: scale(1.05);
   }
-  
+
   /* Hall of Fame Section */
   #hall-of-fame {
     background-color: #222;
@@ -275,14 +278,14 @@
     padding: 50px 20px;
     text-align: center;
   }
-  
+
   .hall-of-fame-list {
     list-style: none;
     padding: 0;
     max-width: 600px;
     margin: 0 auto;
   }
-  
+
   .hall-of-fame-list li {
     font-size: 18px;
     margin: 15px 0;
@@ -292,18 +295,237 @@
     box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.1);
     transition: transform 0.3s ease-in-out;
   }
-  
+
   .hall-of-fame-list li:hover {
     transform: scale(1.05);
   }
-  
+
   .hall-of-fame-content a {
     color: #f4c542;
     font-weight: bold;
     text-decoration: none;
   }
-  
+
   .hall-of-fame-content a:hover {
     text-decoration: underline;
   }
-  
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+    }
+
+    .cta-button {
+      padding: 10px 20px;
+      font-size: 1rem;
+    }
+
+    .about-content,
+    .contact-content,
+    .tips-content,
+    .hall-of-fame-content {
+      padding: 0 10px;
+    }
+
+    .contact-methods {
+      grid-template-columns: 1fr;
+    }
+
+    .feature-card,
+    .contact-card {
+      padding: 1rem;
+    }
+
+    .survival-list li,
+    .hall-of-fame-list li {
+      font-size: 16px;
+    }
+
+    /* Mobile-only Section */
+    .mobile-only {
+      background-color: #ff9800;
+      /* Bright orange background */
+      padding: 2rem 1rem;
+      text-align: center;
+      display: none;
+      /* Hidden by default */
+    }
+
+    @media (max-width: 768px) {
+      .mobile-only {
+        display: block;
+        /* Show only on mobile */
+      }
+    }
+
+    .mobile-section-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .mobile-intro {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 1.5rem;
+    }
+
+    .mobile-tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .mobile-tip-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .mobile-tip-card:hover {
+      transform: translateY(-0.5rem);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .mobile-tip-card .emoji {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .mobile-tip-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+
+    .mobile-tip-card p {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    .mobile-cta-button {
+      display: inline-block;
+      background: #333;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 2rem;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .mobile-cta-button:hover {
+      background: #555;
+      transform: scale(1.05);
+    }
+
+    /* Mobile-only elements */
+    .mobile-only {
+      display: block;
+    }
+
+    .desktop-only {
+      display: none;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .mobile-only {
+      display: none;
+    }
+
+    .desktop-only {
+      display: block;
+    }
+  }
+
+  /* Mascot Styles */
+  .mascot {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 8rem;
+    /* Bigger mascot */
+    height: 8rem;
+    animation: jump 2s infinite;
+    display: none;
+    /* Hidden by default */
+    z-index: 1000;
+    /* Ensure it's above other elements */
+  }
+
+  .mascot img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Message Box with Arrow */
+  .mascot-message {
+    position: absolute;
+    bottom: 9rem;
+    /* Position above the mascot */
+    right: 0;
+    background: #333;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: none;
+    font-size: 1rem;
+    width: 12rem;
+    text-align: center;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+  }
+
+  /* Arrow pointing to the mascot */
+  .message-arrow {
+    position: absolute;
+    bottom: -0.5rem;
+    right: 1rem;
+    width: 0;
+    height: 0;
+    border-left: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+    border-top: 0.5rem solid #333;
+  }
+
+  /* Show message on hover */
+  .mascot:hover .mascot-message {
+    display: block;
+  }
+
+  /* Jump animation */
+  @keyframes jump {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-1rem);
+    }
+  }
+
+  .cta-button {
+    position: relative;
+    z-index: 10;
+  }
+
+  section {
+    padding: 100px 20px;
+  }
+
+  @media (max-width: 768px) {
+    section {
+      padding: 50px 10px;
+    }
+  }

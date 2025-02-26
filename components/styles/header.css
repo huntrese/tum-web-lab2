@@ -6,17 +6,27 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed; /* Make header sticky */
-  top: 0; /* Stick it to the top */
-  z-index: 1000; /* Ensures the header stays on top of other elements */
-  width:100%; /* Ensures full-width */
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+/* Remove y padding on mobile devices */
+@media (max-width: 768px) {
+  header {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 header nav {
   display: flex;
   gap: 10px;
   justify-content: center;
-  flex-grow: 1; /* Ensures nav links are centered */
+  align-items: center;
+  flex-grow: 1;
+  /* Ensures nav links are centered */
 }
 
 header nav a {
@@ -54,22 +64,29 @@ header img {
 /* Styling for "TRY IT NOW!" button */
 header div a {
   color: white;
-  background-color: #ff9800; /* Bright orange color */
+  background-color: #ff9800;
+  /* Bright orange color */
   padding: 12px 25px;
   text-decoration: none;
-  border-radius: 30px; /* Rounded corners */
+  border-radius: 30px;
+  /* Rounded corners */
   font-weight: bold;
-  text-transform: uppercase; /* All caps for emphasis */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  text-transform: uppercase;
+  /* All caps for emphasis */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Subtle shadow for depth */
   transition: all 0.3s ease;
 }
 
 header div a:hover {
-  background-color: #e68900; /* Darker orange on hover */
-  transform: translateY(-2px); /* Slight lift effect */
+  background-color: #e68900;
+  /* Darker orange on hover */
+  transform: translateY(-2px);
+  /* Slight lift effect */
 }
 
 header div a:active {
   background-color: #e68900;
-  transform: translateY(0); /* Reset the lift effect on click */
+  transform: translateY(0);
+  /* Reset the lift effect on click */
 }
