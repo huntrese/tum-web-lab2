@@ -443,7 +443,6 @@ cite {
       display: block;
   }
 }
-
 /* Mascot Styles */
 .mascot {
   position: fixed;
@@ -454,6 +453,12 @@ cite {
   animation: jump 2s infinite;
   display: none;
   z-index: 1000;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.mascot:hover {
+  transform: scale(1.1);
 }
 
 .mascot img {
@@ -470,11 +475,14 @@ cite {
   color: white;
   padding: 1rem; /* 16px */
   border-radius: 0.5rem; /* 8px */
-  display: none;
+  display: none; /* Initially hidden, will be shown via JS */
   font-size: 1rem; /* 16px */
-  width: 12rem; /* 192px */
+  width: 15rem; /* Increased from 12rem to 15rem for longer messages */
   text-align: center;
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2); /* 0 4px 8px */
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none; /* Prevents the message from interfering with hover */
 }
 
 /* Arrow pointing to the mascot */
@@ -489,11 +497,6 @@ cite {
   border-top: 0.5rem solid #333; /* 8px */
 }
 
-/* Show message on hover */
-.mascot:hover .mascot-message {
-  display: block;
-}
-
 /* Jump animation */
 @keyframes jump {
   0%, 100% {
@@ -502,6 +505,17 @@ cite {
   50% {
       transform: translateY(-1rem); /* -16px */
   }
+}
+
+/* Wiggle animation for hover */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+}
+
+.mascot:hover {
+  animation: wiggle 0.5s ease;
 }
 
 .cta-button {
@@ -516,5 +530,10 @@ section {
 @media (max-width: 48rem) { /* 768px */
   section {
       padding: 3.125rem 0.625rem; /* 50px 10px */
+  }
+  
+  .mascot-message {
+    width: 12rem; /* Smaller for mobile */
+    font-size: 0.875rem; /* 14px */
   }
 }
