@@ -16,14 +16,6 @@
   <div id="header-placeholder"></div>
 
   <main>
-    <!-- Mascot -->
-    <div id="mascot" class="mascot">
-      <img src="./components/bosstan_happy.png" alt="Mascot">
-      <div class="mascot-message">
-        Welcome to The University Bible!
-        <div class="message-arrow"></div>
-      </div>
-    </div>
     <!-- Hero Section -->
     <section id="home" class="hero">
       <div class="hero-content">
@@ -154,6 +146,110 @@
           →</a>
       </div>
     </section>
+
+    <!-- Mascot -->
+    <div id="mascot" class="mascot">
+      <img src="./components/bosstan_happy.png" alt="Mascot">
+      <div class="mascot-message" id="mascot-message">
+        Welcome to The University Bible!
+        <div class="message-arrow"></div>
+      </div>
+    </div>
+
+    <!-- JavaScript for mascot dialogue rotation -->
+    <script>
+      // Array of possible mascot dialogues
+      const mascotDialogues = [
+        "Welcome to The University Bible!",
+        "Need help surviving campus?",
+        "Don't forget to eat something besides ramen!",
+        "Time for a study break?",
+        "Remember to sleep... occasionally.",
+        "Finals week is coming! Panic now!",
+        "Pro tip: Befriend someone with a car.",
+        "Your student debt says hi!",
+        "Attend class sometimes, it helps!",
+        "Coffee is a food group, right?",
+        "Group projects = doing all the work yourself!"
+      ];
+
+      // Show mascot after delay
+      setTimeout(() => {
+        document.getElementById('mascot').style.display = 'block';
+        startMascotDialogues();
+      }, 5000);
+
+      // Variables to track state
+      let isHovering = false;
+      let currentDialogue = 0;
+      let dialogueInterval;
+      let hoverTimeout;
+
+      // Start the mascot dialogue rotation
+      function startMascotDialogues() {
+        const mascot = document.getElementById('mascot');
+        const messageBox = document.getElementById('mascot-message');
+
+        // Initial state - message hidden
+        messageBox.style.opacity = 0;
+        messageBox.style.display = 'block';
+
+        // Add hover event listeners
+        mascot.addEventListener('mouseenter', () => {
+          isHovering = true;
+          clearTimeout(hoverTimeout);
+
+          // Show current message immediately on hover
+          messageBox.style.opacity = 1;
+
+          // Stop the automatic rotation while hovering
+          clearInterval(dialogueInterval);
+        });
+
+        mascot.addEventListener('mouseleave', () => {
+          isHovering = false;
+
+          // Hide message after leaving
+          messageBox.style.opacity = 0;
+
+          // Set a timeout to restart the dialogue rotation
+          hoverTimeout = setTimeout(() => {
+            if (!isHovering) {
+              rotateDialogues();
+            }
+          }, 3000); // Wait 3 seconds before restarting rotation
+        });
+
+        // Start the rotation
+        rotateDialogues();
+
+        function rotateDialogues() {
+          // Clear any existing interval
+          clearInterval(dialogueInterval);
+
+          // Set up the rotation interval
+          dialogueInterval = setInterval(() => {
+            if (!isHovering) {
+              // Show message
+              messageBox.style.opacity = 1;
+
+              // Update message
+              messageBox.innerHTML = mascotDialogues[currentDialogue] + '<div class="message-arrow"></div>';
+
+              // Move to next dialogue for next time
+              currentDialogue = (currentDialogue + 1) % mascotDialogues.length;
+
+              // Hide message after showing for 3 seconds
+              setTimeout(() => {
+                if (!isHovering) {
+                  messageBox.style.opacity = 0;
+                }
+              }, 3000);
+            }
+          }, 7000); // Run every 7 seconds
+        }
+      }
+    </script>
 
 
     <!-- Back to Top Button -->
