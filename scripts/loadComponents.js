@@ -17,26 +17,6 @@ async function loadComponent(componentName, targetElementId) {
   }
 }
 
-// Function to initialize burger menu functionality
-function initializeBurgerMenu() {
-  const burgerMenu = document.querySelector('.burger-icon');
-  const mobileNav = document.getElementById('mobile-nav');
-  
-  if (burgerMenu && mobileNav) {
-    burgerMenu.addEventListener('click', function() {
-      this.classList.toggle('open');
-      mobileNav.classList.toggle('open');
-    });
-    
-    // Close menu when clicking anywhere on the page
-    document.addEventListener('click', function(event) {
-      if (!event.target.closest('.burger-menu') && !event.target.closest('.mobile-nav')) {
-        burgerMenu.classList.remove('open');
-        mobileNav.classList.remove('open');
-      }
-    });
-  }
-}
 
 // Load all components
 document.addEventListener("DOMContentLoaded", () => {
