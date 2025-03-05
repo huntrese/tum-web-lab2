@@ -8,7 +8,6 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="styles/reset.css">
-  <link rel="stylesheet" href="components/styles/header.css">
   <link rel="stylesheet" href="components/styles/footer.css">
   <script>
     tailwind.config = {
@@ -213,7 +212,7 @@
         </div>
         <div class="text-center">
           <a href="https://miguel-0.itch.io/the-university-bible" 
-             class="btn btn-neutral btn-lg transform hover:scale-105 transition-transform" 
+             class="bg-black p-4 rounded-3xl text-white btn-lg transform hover:scale-105 transition-transform" 
              target="_blank">
             Download Now →
           </a>
@@ -302,9 +301,10 @@ startMascotDialogues();
     </script>
 
     <!-- Back to Top Button -->
-    <button id="back-to-top" 
-            class="fixed bottom-5 left-5 bg-gray-800 text-white p-3 rounded-lg cursor-pointer text-lg hover:bg-gray-600 z-50">
-      ↑
+    <button id="back-to-top"  class="btn btn-square fixed bottom-5 left-5 justify-center items-center ring-white ring-1 ">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="fill-white h-6 w-6 justify-self-center">
+        <path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2 160 448c0 17.7 14.3 32 32 32s32-14.3 32-32l0-306.7L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/>
+      </svg>    
     </button>
   </main>
 
