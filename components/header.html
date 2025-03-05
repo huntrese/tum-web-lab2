@@ -1,30 +1,73 @@
-<header>
-  <img src="./components/image.png" width="40" alt="logo">
-  <nav id="desktop-nav">
-    <a href="#">Home</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-    <a href="#survival-tips">Survival Tips</a>
-    <a href="#hall-of-fame">Hall of Fame</a>
+<header class="bg-gray-800 text-white py-2 px-4 fixed top-0 left-0 right-0 z-50 flex justify-between items-center">
+  <img src="./components/image.png" class="w-10" alt="logo">
+  
+  <!-- Desktop Navigation -->
+  <nav id="desktop-nav" class="hidden md:flex items-center space-x-2 flex-grow justify-center">
+    <a href="#" class="px-4 py-2 hover:bg-gray-600 rounded-md transition-all duration-300 hover:border-white border-2 border-transparent">Home</a>
+    <a href="#about" class="px-4 py-2 hover:bg-gray-600 rounded-md transition-all duration-300 hover:border-white border-2 border-transparent">About</a>
+    <a href="#contact" class="px-4 py-2 hover:bg-gray-600 rounded-md transition-all duration-300 hover:border-white border-2 border-transparent">Contact</a>
+    <a href="#survival-tips" class="px-4 py-2 hover:bg-gray-600 rounded-md transition-all duration-300 hover:border-white border-2 border-transparent">Survival Tips</a>
+    <a href="#hall-of-fame" class="px-4 py-2 hover:bg-gray-600 rounded-md transition-all duration-300 hover:border-white border-2 border-transparent">Hall of Fame</a>
   </nav>
-  <div class="">
-    <a href="https://miguel-0.itch.io/the-university-bible" target="_blank" class="try-it-now-btn">TRY IT NOW!</a>
+  
+  <!-- Desktop CTA -->
+  <div class="hidden md:block">
+    <a href="https://miguel-0.itch.io/the-university-bible" 
+       target="_blank" 
+       class="bg-orange-500 text-white px-6 py-3 rounded-full font-bold uppercase hover:bg-orange-600 transition-all duration-300 transform hover:-translate-y-1 shadow-md">
+      TRY IT NOW!
+    </a>
   </div>
-  <div class="burger-menu">
-    <div class="burger-icon">
-      <span></span>
-      <span></span>
-      <span></span>
+  
+  <!-- Mobile Burger Menu -->
+  <div class="burger-menu md:hidden cursor-pointer" onclick="toggleMobileNav()">
+    <div class="burger-icon space-y-1">
+      <span class="block h-0.5 w-6 bg-white transition-all duration-300"></span>
+      <span class="block h-0.5 w-6 bg-white transition-all duration-300"></span>
+      <span class="block h-0.5 w-6 bg-white transition-all duration-300"></span>
     </div>
   </div>
-  <div class="mobile-nav" id="mobile-nav">
-    <a href="#">Home</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-    <a href="#survival-tips">Survival Tips</a>
-    <a href="#hall-of-fame">Hall of Fame</a>
-    <div class="mobile-cta">
-      <a href="https://miguel-0.itch.io/the-university-bible" target="_blank" class="try-it-now-btn">TRY IT NOW!</a>
+  
+  <!-- Mobile Navigation -->
+  <div id="mobile-nav" class="mobile-nav fixed top-11 left-0 right-0 bg-gray-800 hidden flex flex-col rounded-b-lg">
+    <a href="#" class="py-4 text-center border-b border-gray-700 hover:bg-gray-700">Home</a>
+    <a href="#about" class="py-4 text-center border-b border-gray-700 hover:bg-gray-700">About</a>
+    <a href="#contact" class="py-4 text-center border-b border-gray-700 hover:bg-gray-700">Contact</a>
+    <a href="#survival-tips" class="py-4 text-center border-b border-gray-700 hover:bg-gray-700">Survival Tips</a>
+    <a href="#hall-of-fame" class="py-4 text-center border-b border-gray-700 hover:bg-gray-700">Hall of Fame</a>
+    <div class="py-2 flex justify-center">
+      <a href="https://miguel-0.itch.io/the-university-bible" 
+         target="_blank" 
+         class="bg-orange-500 text-white px-6 py-3 rounded-full font-bold uppercase hover:bg-orange-600 transition-all duration-300">
+        TRY IT NOW!
+      </a>
     </div>
   </div>
 </header>
+
+<style>
+  /* Burger Icon Animation */
+  .burger-icon.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .burger-icon.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger-icon.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Mobile Navigation Animation */
+  .mobile-nav {
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  .mobile-nav.open {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
