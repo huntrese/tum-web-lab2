@@ -8,10 +8,6 @@ async function loadComponent(componentName, targetElementId) {
     const html = await response.text();
     document.getElementById(targetElementId).innerHTML = html;
     
-    // Initialize component-specific functionality
-    if (componentName === "header") {
-      initializeBurgerMenu();
-    }
   } catch (error) {
     console.error(error);
   }
@@ -39,3 +35,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+function toggleMobileNav() {
+  const mobileNav = document.getElementById('mobile-nav');
+  const burgerIcon = document.querySelector('.burger-icon');
+  
+  mobileNav.classList.toggle('hidden');
+  mobileNav.classList.toggle('open');
+  burgerIcon.classList.toggle('open');
+}
