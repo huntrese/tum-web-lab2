@@ -21,7 +21,8 @@
           },
           animation: {
             'jump': 'jump 2s infinite',
-            'wiggle': 'wiggle 0.5s ease'
+            'wiggle': 'wiggle 0.5s ease',
+            'slideIn': 'slideIn 0.7s ease-in-out 3s forwards'
           },
           keyframes: {
             jump: {
@@ -32,6 +33,10 @@
               '0%, 100%': { transform: 'rotate(0deg)' },
               '25%': { transform: 'rotate(-5deg)' },
               '75%': { transform: 'rotate(5deg)' }
+            },
+            slideIn: {
+              '0%': { transform: 'translateX(100%)', opacity: '0' },
+              '100%': { transform: 'translateX(0)', opacity: '1' }
             }
           }
         }
@@ -46,15 +51,14 @@
 
   <main>
     <!-- Hero Section -->
-    <section id="home" class="hero min-h-screen bg-cover bg-center text-white" 
-             style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1950')">
+    <section id="home" class="hero min-h-screen bg-cover bg-center text-white"
+      style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1950')">
       <div class="hero-content text-center">
         <div class="max-w-md">
           <h1 class="text-4xl font-bold uppercase mb-4">CAN YOU SURVIVE THE UNIVERSITY MADNESS?</h1>
           <p class="text-2xl mb-8">97% of students fail in their first semester... Will you be different?</p>
-          <a href="https://miguel-0.itch.io/the-university-bible" 
-             class="btn btn-warning btn-lg transform hover:scale-105 transition-transform" 
-             target="_blank">
+          <a href="https://miguel-0.itch.io/the-university-bible"
+            class="btn btn-warning btn-lg transform hover:scale-105 transition-transform" target="_blank">
             PLAY NOW FOR FREE →
           </a>
           <p class="text-sm text-red-500 mt-4">Warning: May cause addiction to virtual campus life!</p>
@@ -73,16 +77,19 @@
           </p>
           <ul class="space-y-4">
             <li class="bg-gray-800 p-4 rounded-lg hover:translate-x-2 transition-transform">
-              📉 <strong>Financial Ruin:</strong> Experience the thrill of paying $50,000 for a degree that gets you a job at a coffee shop.
+              📉 <strong>Financial Ruin:</strong> Experience the thrill of paying $50,000 for a degree that gets you a
+              job at a coffee shop.
             </li>
             <li class="bg-gray-800 p-4 rounded-lg hover:translate-x-2 transition-transform">
-              😴 <strong>Sleep Deprivation:</strong> Pull all-nighters to finish assignments you started 3 hours before the deadline.
+              😴 <strong>Sleep Deprivation:</strong> Pull all-nighters to finish assignments you started 3 hours before
+              the deadline.
             </li>
             <li class="bg-gray-800 p-4 rounded-lg hover:translate-x-2 transition-transform">
               🍜 <strong>Ramen Diet:</strong> Master the art of surviving on instant noodles for weeks at a time.
             </li>
             <li class="bg-gray-800 p-4 rounded-lg hover:translate-x-2 transition-transform">
-              📚 <strong>Useless Knowledge:</strong> Memorize facts you'll never use in real life, just like real university!
+              📚 <strong>Useless Knowledge:</strong> Memorize facts you'll never use in real life, just like real
+              university!
             </li>
           </ul>
           <p>
@@ -109,7 +116,8 @@
           <div class="grid md:grid-cols-3 gap-6">
             <div class="bg-white text-black p-6 rounded-lg">
               <h3 class="text-2xl mb-4">📧 Email</h3>
-              <p><a href="mailto:support@universitybible.com" class="text-custom-orange hover:underline">support@universitybible.com</a></p>
+              <p><a href="mailto:support@universitybible.com"
+                  class="text-custom-orange hover:underline">support@universitybible.com</a></p>
               <p class="text-sm text-gray-500">(Response time: 3-5 business days, or never.)</p>
             </div>
             <div class="bg-white text-black p-6 rounded-lg">
@@ -151,7 +159,8 @@
               🥳 <strong>Balance Fun & Study:</strong> Failing exams is bad, but missing parties is a crime.
             </li>
             <li class="bg-white p-4 border-l-4 border-red-400 hover:scale-105 transition-transform">
-              🤝 <strong>Make Connections:</strong> Network with professors, classmates, and the janitor (you never know).
+              🤝 <strong>Make Connections:</strong> Network with professors, classmates, and the janitor (you never
+              know).
             </li>
           </ul>
           <p class="italic">Follow these, and you <em>might</em> just survive... maybe.</p>
@@ -176,13 +185,13 @@
               📚 <strong>Emma "Last-Minute Genius" Patel:</strong> Studied an entire textbook the night before an exam.
             </li>
             <li class="bg-gray-800 p-4 border-l-4 border-yellow-400 hover:scale-105 transition-transform">
-              🍻 <strong>Tom "The Party Scholar" Wong:</strong> Attended every party but still graduated top of his class.
+              🍻 <strong>Tom "The Party Scholar" Wong:</strong> Attended every party but still graduated top of his
+              class.
             </li>
           </ul>
-          <p>Think you have what it takes to join them? Prove it in 
-            <a href="https://miguel-0.itch.io/the-university-bible" 
-               class="text-yellow-400 font-bold hover:underline" 
-               target="_blank">The University Bible</a>!
+          <p>Think you have what it takes to join them? Prove it in
+            <a href="https://miguel-0.itch.io/the-university-bible" class="text-yellow-400 font-bold hover:underline"
+              target="_blank">The University Bible</a>!
           </p>
         </div>
       </div>
@@ -211,100 +220,108 @@
           </div>
         </div>
         <div class="text-center">
-          <a href="https://miguel-0.itch.io/the-university-bible" 
-             class="bg-black p-4 rounded-3xl text-white btn-lg transform hover:scale-105 transition-transform" 
-             target="_blank">
+          <a href="https://miguel-0.itch.io/the-university-bible"
+            class="bg-black p-4 rounded-3xl text-white btn-lg transform hover:scale-105 transition-transform"
+            target="_blank">
             Download Now →
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Mascot -->
-    <div id="mascot" class="fixed bottom-8 right-8 w-32 h-32 z-50 cursor-pointer hidden animate-jump hover:animate-wiggle">
-      <img src="./components/bosstan_happy.png" alt="Mascot" class="w-full h-auto">
-      <div id="mascot-message" 
-           class="absolute bottom-36 right-0 bg-gray-800 text-white p-4 rounded-lg w-60 text-center opacity-0 hidden transition-opacity duration-300">
+    <!-- Update your mascot div with fixed hover behavior -->
+    <div id="mascot"
+      class="fixed bottom-8 right-8 w-32 h-32 z-50 cursor-pointer opacity-0 translate-x-full motion-safe:animate-[slideIn_0.7s_ease-in-out_3s_forwards] group">
+      <img src="./components/bosstan_happy.png" alt="Mascot"
+        class="w-full h-auto group-hover:animate-wiggle animate-jump">
+      <div id="mascot-message"
+        class="absolute bottom-36 right-0 bg-gray-800 text-white p-4 rounded-lg w-60 text-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
         Welcome to The University Bible!
         <div class="absolute -bottom-2 right-4 w-0 h-0 
-                    border-l-8 border-r-8 border-l-transparent border-r-transparent 
-                    border-t-8 border-t-gray-800"></div>
+                border-l-8 border-r-8 border-l-transparent border-r-transparent 
+                border-t-8 border-t-gray-800"></div>
       </div>
     </div>
 
+
+
     <!-- Mascot Script will remain the same as previous implementation -->
     <script>
-// Array of possible mascot dialogues
-const mascotDialogues = [
-  "Welcome to The University Bible!",
-  "Need help surviving campus?",
-  "Don't forget to eat something besides ramen!",
-  "Time for a study break?",
-  "Remember to sleep... occasionally.",
-  "Finals week is coming! Panic now!",
-  "Pro tip: Befriend someone with a car.",
-  "Your student debt says hi!",
-  "Attend class sometimes, it helps!",
-  "Coffee is a food group, right?",
-  "Group projects = doing all the work yourself!"
-];
+      // Array of possible mascot dialogues
+      const mascotDialogues = [
+        "Welcome to The University Bible!",
+        "Need help surviving campus?",
+        "Don't forget to eat something besides ramen!",
+        "Time for a study break?",
+        "Remember to sleep... occasionally.",
+        "Finals week is coming! Panic now!",
+        "Pro tip: Befriend someone with a car.",
+        "Your student debt says hi!",
+        "Attend class sometimes, it helps!",
+        "Coffee is a food group, right?",
+        "Group projects = doing all the work yourself!"
+      ];
 
-// Variables to track state
-let isHovering = false;
-let currentDialogue = 0;
-let dialogueInterval;
+      // Variables to track state
+      let isHovering = false;
+      let currentDialogue = 0;
+      let dialogueInterval;
 
-// Start the mascot dialogue rotation
-function startMascotDialogues() {
-  const mascot = document.getElementById('mascot');
-  const messageBox = document.getElementById('mascot-message');
 
-  // Add hover event listeners
-  mascot.addEventListener('mouseenter', () => {
-    isHovering = true;
-    clearInterval(dialogueInterval); // Stop automatic rotation
-    messageBox.style.opacity = 1; // Show message immediately
-  });
 
-  mascot.addEventListener('mouseleave', () => {
-    isHovering = false;
-    messageBox.style.opacity = 0; // Hide message
-    startDialogueRotation(); // Restart automatic rotation
-  });
+      // Start the mascot dialogue rotation
+      function startMascotDialogues() {
+        const mascot = document.getElementById('mascot');
+        const messageBox = document.getElementById('mascot-message');
 
-  // Start the dialogue rotation
-  startDialogueRotation();
+        // Add hover event listeners
+        mascot.addEventListener('mouseenter', () => {
+          isHovering = true;
+          clearInterval(dialogueInterval); // Stop automatic rotation
+          messageBox.style.opacity = 1; // Show message immediately
+        });
 
-  function startDialogueRotation() {
-    dialogueInterval = setInterval(() => {
-      if (!isHovering) {
-        // Update message
-        messageBox.innerHTML = mascotDialogues[currentDialogue] + '<div class="message-arrow"></div>';
-        messageBox.style.opacity = 1; // Show message
+        mascot.addEventListener('mouseleave', () => {
+          isHovering = false;
+          messageBox.style.opacity = 0; // Hide message
+          startDialogueRotation(); // Restart automatic rotation
+        });
 
-        // Move to next dialogue
-        currentDialogue = (currentDialogue + 1) % mascotDialogues.length;
+        // Start the dialogue rotation
+        startDialogueRotation();
 
-        // Hide message after 3 seconds
-        setTimeout(() => {
-          if (!isHovering) {
-            messageBox.style.opacity = 0;
-          }
-        }, 3000);
+        function startDialogueRotation() {
+          dialogueInterval = setInterval(() => {
+            if (!isHovering) {
+              // Update message
+              messageBox.innerHTML = mascotDialogues[currentDialogue] + '<div class="message-arrow"></div>';
+              messageBox.style.opacity = 1; // Show message
+
+              // Move to next dialogue
+              currentDialogue = (currentDialogue + 1) % mascotDialogues.length;
+              // Hide message after 3 seconds
+              setTimeout(() => {
+                if (!isHovering) {
+                  messageBox.style.opacity = 0;
+                }
+              }, 3000);
+            }
+          }, 7000); // Run every 7 seconds
+        }
+
       }
-    }, 7000); // Run every 7 seconds
-  }
-}
 
-// Start the mascot dialogues when the page loads
-startMascotDialogues();
+      // Start the mascot dialogues when the page loads
+      startMascotDialogues();
     </script>
 
     <!-- Back to Top Button -->
-    <button id="back-to-top"  class="btn btn-square fixed bottom-5 left-5 justify-center items-center ring-white ring-1 ">
+    <button id="back-to-top"
+      class="btn btn-square fixed bottom-5 left-5 justify-center items-center ring-white ring-1 ">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="fill-white h-6 w-6 justify-self-center">
-        <path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2 160 448c0 17.7 14.3 32 32 32s32-14.3 32-32l0-306.7L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/>
-      </svg>    
+        <path
+          d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2 160 448c0 17.7 14.3 32 32 32s32-14.3 32-32l0-306.7L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z" />
+      </svg>
     </button>
   </main>
 
@@ -314,4 +331,5 @@ startMascotDialogues();
   <!-- Load components -->
   <script src="scripts/loadComponents.js"></script>
 </body>
+
 </html>
